@@ -52,6 +52,39 @@ def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders, t
         take_out_orders, dine_in_orders, served_orders,
         take_out_orders_index, dine_in_orders_index, served_orders_index)
 
+'''
+An iterative solutiion that takes the above space complexity from O(n) to O(1)
+'''
+
+def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
+    take_out_orders_index = 0
+    dine_in_orders_index = 0
+    take_out_orders_max_index = len(take_out_orders) - 1
+    dine_in_orders_max_index = len(dine_in_orders) - 1
+    
+    for order in served_orders:
+        # If we still have orders in take_out_orders
+        # and the current order in take_out_orders is the same
+        # as the current order in served_orders
+        if take_out_orders_index <= take_out_orders_max_index and order == take_out_orders[take_out_orders_index]:
+            take_out_orders_index += 1
+        
+        # If we still have orders in dine_in_orders
+        # and the current order in dine_in_orders is the same
+        # as the current order in served_orders
+        
+        elif dine_in_orders_index <= dine_in_orders_max_index and order == dine_in_orders[dine_in_orders_index]:
+            dine_in_orders_index += 1
+            
+        else:
+            return False
+    
+    # Check for extra orders at the end of take_out_orders or dine_in_orders
+    
+    if dine_in_orders_index != len(dine_in_orders) or take_out_orders_index != len(take_out_orders):
+        return False
+    
+    return True
 
 # Tests
 class Test(unittest.TestCase):
