@@ -13,11 +13,6 @@ Optimize for runtime over memory
 
 '''
 
-
-
-
-
-
 import unittest
 
 
