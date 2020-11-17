@@ -11,7 +11,7 @@ def get_max_profit(stock_prices):
     counter = 0
     
     if len(stock_prices) <= 1:
-        raise Exception("Not a valid input")
+        raise ValueError("Getting a profit requires at least 2 prices")
     
     for stock in stock_prices:
         
