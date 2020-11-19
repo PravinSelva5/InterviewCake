@@ -4,8 +4,8 @@ Given a balanced string s split it in the maximum amount of balanced strings.
 Return the maximum amount of splitted balanced strings.
 
 ---------------------------------------------------------------------------------------------------------------
-Runtime: 28 ms, faster than 78.65% of Python3 online submissions for Split a String in Balanced Strings.
-Memory Usage: 14.1 MB, less than 69.21% of Python3 online submissions for Split a String in Balanced Strings.
+Runtime: 28 ms, faster than 78.65`%` of Python3 online submissions for Split a String in Balanced Strings.
+Memory Usage: 14.1 MB, less than 69.21`%` of Python3 online submissions for Split a String in Balanced Strings.
 ---------------------------------------------------------------------------------------------------------------
 '''
 class Solution:
