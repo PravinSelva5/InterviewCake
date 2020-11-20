@@ -53,9 +53,9 @@ def highest_product_of_3(list_of_ints):
 
     return highest_product_of_3
 
-    
 
-    # Tests
+
+# Tests
 class Test(unittest.TestCase):
 
     def test_short_list(self):
