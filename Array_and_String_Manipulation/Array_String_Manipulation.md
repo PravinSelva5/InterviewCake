@@ -35,3 +35,30 @@ Working in-place saves time and space but YOU NEED TO BE CAREFUL because your in
 --------------------------------
 
 In general, only use in-place when you're space constrained or you're positive you don't need the original input anymore, even for debugging.
+
+
+
+-----------------------
+    DYNAMIC ARRAY
+-----------------------
+
+A dynamic array expands as you add more elements. So you don't need to determine the size ahead of time.
+
+Pros include fast lookups, variable size, and cache-friendly(items are placed next to each other in memory)
+Cons includes slow worst-case appends and costly inserts & deletes
+
+-----------------------
+    Size vs Capacity
+-----------------------
+
+Size refers to the amount of elements are in the array. Capacity refers to the total amount of elements the array can hold, size + non_occupied space. A end_index variable is created to keep track of where the dynamic  array ends and the extra capacity begins
+
+
+*** Amortized cost of appending ***
+
+1. The time cost of each special O(n) "doubling speed" doubles each time
+2. At the same time, the number of O(1) appends you get until the next doubling append also doubles
+
+These two things sort of "cancel out" and we can say each append has an average cost or AMORTIZED COST of O(1)
+
+In the industry, we say dynamic arrays have a time cost of O(1) for appends, even thought strictly speaking that's only true for the average case or the amortized cost.
